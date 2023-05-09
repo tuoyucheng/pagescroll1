@@ -1,16 +1,12 @@
 @charset "utf-8";
 
-/*========= 上部固定させるためのCSS ===============*/
 #header {
   top: 0;
   left: 0;
   width: 100%;
   position: fixed;
   height: 70px;
-  /*高さ指定*/
   width: 100%;
-  /*横幅指定*/
-  /*以下はレイアウトのためのCSS*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,28 +16,22 @@
   padding: 20px;
 }
 
-/*JSを使いfixedクラスが付与された際の設定*/
 #header.fixed {
   position: fixed;
-  /*fixedを設定して固定*/
   z-index: 999;
-  /*最前面へ*/
   top: 0;
-  /*位置指定*/
   left: 0;
-  /*位置指定*/
 }
 
-
-/*========= レイアウトのためのCSS ===============*/
-
-main{
+main {
   margin-top: 200px;
 }
+
 #g-navi {
+  list-style: none;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-
+  text-align: center;
 }
 
 
@@ -79,8 +69,8 @@ nav {
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: #666;
-  padding: 10px;
+  color: white;
+  padding: 5px;
   transition: all 0.3s;
 }
 
@@ -91,7 +81,7 @@ nav ul li a:hover {
 
 
 section {
-  padding: 30px;
+  padding: 20px;
 }
 
 section:nth-child(2n) {
