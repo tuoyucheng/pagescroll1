@@ -2,16 +2,21 @@
 function FixedAnime() {
   var headerH = $('#header').outerHeight(true);
   var scroll = $(window).scrollTop();
-  if (scroll >= headerH) { //headerの高さ以上になったら
-    $('#header').addClass('fixed'); //fixedというクラス名を付与
-  } else { //それ以外は
-    $('#header').removeClass('fixed'); //fixedというクラス名を除去
+  if (scroll >= headerH) { 
+    //headerの高さ以上になったら
+    $('#header').addClass('fixed'); 
+    //fixedというクラス名を付与
+  } else { 
+    //それ以外はfixedというクラス名を除去
+    $('#header').removeClass('fixed'); 
   }
 }
 //ナビゲーションをクリックした際のスムーススクロール
 $('#g-navi a').click(function () {
-  var elmHash = $(this).attr('href'); //hrefの内容を取得
-  var pos = Math.round($(elmHash).offset().top - 120); //headerの高さを引く
+  //hrefの内容を取得
+  var elmHash = $(this).attr('href'); 
+  //headerの高さを引く
+  var pos = Math.round($(elmHash).offset().top - 120); 
   $('body,html').animate({
     scrollTop: pos
   }, 500); //取得した位置にスクロール※数値が大きいほどゆっくりスクロール
